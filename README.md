@@ -16,7 +16,7 @@ To run the portals, you need to copy the correct ".env" file from it's folder "e
 
 Example:
 
-> For "fallimenti", copy the file `/apps/fallimenti/env/.env.development` to `/apps/fallimenti/.env`.
+> For "Portfolio", copy the file `/apps/photography/env/.env.development` to `/apps/photography/.env`.
 
 ## Https
 
