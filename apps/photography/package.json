@@ -52,6 +52,7 @@
         "postinstall": "pnpm photography:prepare"
     },
     "dependencies": {
+        "@luxdamore/stylesheets": "workspace:^",
         "autoprefixer": "^10.4.21",
         "modern-normalize": "^3.0.1",
         "nuxi": "^3.22.5",

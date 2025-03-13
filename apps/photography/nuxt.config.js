@@ -1,15 +1,28 @@
-// Nuxt
-import { defineNuxtConfig } from 'nuxt/config';
-
 // Node
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-const currentDirectory = dirname( fileURLToPath( import.meta.url ) );
+// Package
+import packageJson from './package.json';
+
+// Nuxt
+import { defineNuxtConfig } from 'nuxt/config';
+
+const
+    // Active directory
+    currentDirectory = dirname( fileURLToPath( import.meta.url ) )
+    // Check build value
+    , isProduction = process.env.NODE_ENV === 'production'
+;
 
 // Nuxt Config
 export default defineNuxtConfig(
     {
+
+        alias: {
+            '=': fileURLToPath( new URL( 'app/', import.meta.url ) ), // eslint-disable-line compat/compat,
+            '==': fileURLToPath( new URL( '.', import.meta.url ) ), // eslint-disable-line compat/compat,
+        },
 
         // ?: Da attivare per debug, utilissimo
         /*
@@ -23,7 +36,8 @@ export default defineNuxtConfig(
             baseURL: '/',
             head: {
                 htmlAttrs: {
-                    lang: 'it',
+                    'data-v': packageJson.version,
+                    lang: 'en',
                     translate: 'no',
                 },
                 link: [
@@ -102,7 +116,7 @@ export default defineNuxtConfig(
             },
         },
 
-        appId: 'photography-portfolio',
+        appId: 'photography',
 
         compatibilityDate: '2025-03-12',
 
@@ -112,6 +126,17 @@ export default defineNuxtConfig(
             join( currentDirectory, './app/assets/styles/root.scss' ),
             '~/assets/styles/override-variables.scss',
         ],
+
+        // pruneHtml: {
+        //     hideGenericMessagesInConsole: isProduction,
+        // },
+
+        devServer: {
+            https: {
+                cert: './certificates/server.cert.pem',
+                key: './certificates/server.key.pem'
+            }
+        },
 
         experimental: {
 
@@ -131,11 +156,53 @@ export default defineNuxtConfig(
 
         future: { compatibilityVersion: 4 },
 
+        // modules: [
+        //     // '@luxdamore/nuxt-prune-html',
+        //     // '@luxdamore/nuxt-apis-to-file',
+        //     // '@pinia/nuxt',
+        //     // '@vite-pwa/nuxt',
+        // ],
+
         nitro: {
             compressPublicAssets: {
-                brotli: true,
-                gzip: true,
+                brotli: isProduction,
+                gzip: isProduction,
             },
+            publicAssets: [
+                {
+                    baseURL: 'images',
+                    dir: 'public/images',
+                    maxAge: 60 * 60 * 24 * 365,
+                },
+                {
+                    baseURL: 'images',
+                    dir: 'public/videos',
+                    maxAge: 60 * 60 * 24 * 365,
+                },
+            ],
+        },
+
+        pwa: {
+            client: { installPrompt: false },
+            devOptions: {
+                navigateFallback: undefined, // ?: https://github.com/nuxt/nuxt/issues/24748
+                suppressWarnings: true,
+                type: 'module',
+            },
+            disable: process.env.NODE_ENV === 'development',
+            includeAssets: [ 'favicon.ico', ],
+            includeManifestIcons: true,
+            injectManifest: { minify: true },
+            manifest: {
+                display: 'standalone',
+                name: process.env.PORTAL_SHORT_NAME,
+                short_name: process.env.PORTAL_SHORT_NAME,
+                start_url: '/',
+                theme_color: '#005F65',
+            },
+            minify: true,
+            registerType: 'autoUpdate',
+            workbox: { cleanupOutdatedCaches: true },
         },
 
         routeRules: {
@@ -143,6 +210,7 @@ export default defineNuxtConfig(
             '/_nuxt/*.css': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
             '/_nuxt/*.js': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } }
         },
+
         router: { options: { scrollBehaviorType: 'smooth', } },
 
         srcDir: 'app',
