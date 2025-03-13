@@ -1,0 +1,33 @@
+public/
+docs/
+
+dist/
+build/
+docs/
+ssr/
+
+vendor/
+bower_components/
+node_modules/
+.vscode/
+.nuxt/
+.nuxt-*/
+.nuxt.*/
+
+*.md
+*.json
+*.ts
+*.js
+*.min.*
+
+sw.js
+
+.output
+
+spa-loading-template.html
+
+# Aggiunto per velocizzare, tanto i file scss sono sempre separati
+*.vue
+
+# Nx
+/.nx

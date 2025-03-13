@@ -1,0 +1,6 @@
+$transitions: (
+    "base": "all .18s ease",
+    "cubic": "all .18s cubic-bezier( .455, .03, .515, .955 )",
+    "opacity-cubic": "opacity .18s cubic-bezier( .455, .03, .515, .955 )",
+    "transform-cubic": "transform .18s cubic-bezier( .455, .03, .515, .955 )",
+) !default;

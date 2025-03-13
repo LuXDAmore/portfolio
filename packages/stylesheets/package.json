@@ -1,0 +1,44 @@
+{
+    "name": "@luxdamore/stylesheets",
+    "version": "1.0.0",
+    "description": "The stylesheets colors",
+    "author": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)",
+    "license": "MIT",
+    "homepage": "https://github.com/LuXDAmore/photography",
+    "keywords": [
+        "design-system",
+        "stylesheet"
+    ],
+    "contributors": [
+        {
+            "name": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LuXDAmore/photography.git"
+    },
+    "bugs": {
+        "url": "https://github.com/LuXDAmore/photography/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "main": "src/index.scss",
+    "type": "module",
+    "scripts": {
+        "stylesheets:migrate": "pnpm dlx sass-migrator module --verbose --migrate-deps ./src/index.scss",
+        "stylesheets:dev": "sass --watch ./test/index.scss ./test/.output/index.css",
+        "stylesheets:serve": "pnpm stylesheets:dev",
+        "stylesheets:compile": "sass ./src/index.scss ./dist/index.css",
+        "stylesheets:test": "pnpm stylesheets:compile",
+        "postinstall": "pnpm stylesheets:compile"
+    },
+    "dependencies": {
+        "sass": "^1.85.1"
+    }
+}

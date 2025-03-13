@@ -1,0 +1,34 @@
+public/
+docs/
+
+dist/
+build/
+docs/
+ssr/
+
+vendor/
+bower_components/
+node_modules/
+.vscode/
+.nuxt/
+.nuxt-*/
+.nuxt.*/
+.output
+
+*.min.*
+
+sw.js
+
+*.md
+*.json
+spa-loading-template.html
+
+components.d.ts
+
+# Nuxt typed routes
+generated
+__typed-router.ts
+
+# NX
+/.nx/cache
+/.nx/workspace-data

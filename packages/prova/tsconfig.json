@@ -1,0 +1,12 @@
+{
+    "exclude": [
+        "test",
+        "dist",
+        ".output",
+        "node_modules",
+        "../../node_modules",
+        "public",
+        "src/module/runtime/server",
+        "src/module/dist/runtime/server"
+    ]
+}

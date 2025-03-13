@@ -1,0 +1,33 @@
+// Colors
+$colors: (
+    // Base
+    "primary": (
+        "light": #D9D7BF,
+        "base": #F2D785,
+        "dark": #F2CD88,
+        "darker": #736F3F
+    ),
+    "secondary": (
+        "base": #3C5973,
+        "light": #45578C,
+        "dark": #314E59
+    )
+) !default;
+
+// /* Color Theme Swatches in Hex */
+// $Logo-1-hex: #45578C;
+// $Logo-2-hex: #3C5973;
+
+// /* Color Theme Swatches in RGBA */
+// $Logo-1-rgba: rgba(69,87,140, 1);
+// $Logo-2-rgba: rgba(60,89,115, 1);
+// $Logo-3-rgba: rgba(115,111,63, 1);
+// $Logo-4-rgba: rgba(242,215,133, 1);
+// $Logo-5-rgba: rgba(242,205,136, 1);
+
+// /* Color Theme Swatches in HSLA */
+// $Logo-1-hsla: hsla(224, 33, 40, 1);
+// $Logo-2-hsla: hsla(208, 31, 34, 1);
+// $Logo-3-hsla: hsla(55, 29, 34, 1);
+// $Logo-4-hsla: hsla(45, 80, 73, 1);
+// $Logo-5-hsla: hsla(39, 80, 74, 1);

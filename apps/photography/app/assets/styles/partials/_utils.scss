@@ -1,0 +1,99 @@
+// ?: Maybe this file not useful
+// Width and Height
+.h {
+
+    &--full {
+
+        height: 100% !important;
+
+    }
+
+}
+
+.w {
+
+    &--full {
+
+        width: 100% !important;
+
+    }
+
+}
+
+// Text colors
+.text {
+
+    &--primary {
+
+        color: var( --color-primary ) !important;
+
+        &-dark {
+
+            color: var( --color-primary-dark ) !important;
+
+        }
+
+    }
+
+    &--grey {
+
+        &-medium {
+
+            color: var( --color-basecolor-grey-medium ) !important;
+
+        }
+
+    }
+
+    &--purple {
+
+        color: var( --color-text-purple );
+
+    }
+
+    &--center {
+
+        text-align: center;
+
+    }
+
+}
+
+// Spacers
+.spacer {
+
+    flex: 1 0 auto !important;
+
+}
+
+// Opacity
+.opacity {
+
+    &--0 {
+
+        opacity: 0 !important;
+
+    }
+
+}
+
+.white-space {
+
+    &--pre {
+
+        white-space: pre-line;
+
+    }
+
+}
+
+// Display
+.d {
+
+    &--block {
+
+        display: block;
+
+    }
+
+}

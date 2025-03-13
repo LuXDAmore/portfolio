@@ -1,0 +1,50 @@
+@use "sass:meta";
+@use "sass:map";
+
+// Helpers
+@function is-map( $var ) {
+
+    $type-of-var: meta.type-of( $var );
+
+    @return $type-of-var == "map" or $type-of-var == "list";
+
+}
+@function get-mapped-values( $name-or-raw-value, $type, $map: () ) {
+
+    $value: map.get( $map, $name-or-raw-value );
+
+    @if is-map( $value ) and $type {
+
+        @return map.get( $value, $type );
+
+    }
+    @if $value {
+
+        @return $value;
+
+    }
+
+    @return $name-or-raw-value;
+
+}
+
+// Colors
+@function get-color( $name, $type: base ) {
+
+    @return get-mapped-values( $name, $type, $colors );
+
+}
+
+// Fonts
+@function get-font( $name, $type: base ) {
+
+    @return get-mapped-values( $name, $type, $fonts );
+
+}
+
+// Breakpoints
+@function get-breakpoint( $name, $type: base ) {
+
+    @return get-mapped-values( $name, $type, $breakpoints );
+
+}

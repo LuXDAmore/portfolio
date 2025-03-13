@@ -1,0 +1,67 @@
+{
+    "name": "@luxdamore/photography",
+    "version": "1.0.0",
+    "description": "The photography portfolio",
+    "author": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)",
+    "license": "MIT",
+    "homepage": "https://photography.lucaiaconelli.it",
+    "keywords": [
+        "design-system",
+        "nuxt",
+        "nuxt-module",
+        "vuejs",
+        "nuxtjs",
+        "modules"
+    ],
+    "contributors": [
+        {
+            "name": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LuXDAmore/photography.git"
+    },
+    "bugs": {
+        "url": "https://github.com/LuXDAmore/photography/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "nuxt.config.js",
+        ".nuxt",
+        ".output",
+        "dist"
+    ],
+    "type": "module",
+    "main": "nuxt.config.js",
+    "scripts": {
+        "photography:check:nuxt4": "pnpm dlx codemod@latest nuxt/4/migration-recipe",
+        "photography:analyze": "nuxi analyze",
+        "photography:build": "nuxi build",
+        "photography:nuxt:upgrade": "nuxi upgrade --force",
+        "photography:dev": "nuxi dev -o",
+        "photography:serve": "pnpm photography:dev",
+        "photography:generate": "nuxi generate",
+        "photography:preview": "nuxi preview",
+        "photography:clean": "nuxi cleanup",
+        "photography:prepare": "nuxi prepare",
+        "prephotography:start": "pnpm photography:clean && pnpm photography:build",
+        "photography:start": "nuxi start",
+        "postinstall": "pnpm photography:prepare"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.21",
+        "modern-normalize": "^3.0.1",
+        "nuxi": "^3.22.5",
+        "nuxt": "^3.16.0",
+        "sass": "^1.85.1",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    },
+    "devDependencies": {
+        "@parcel/watcher": "^2.5.1",
+        "@tsconfig/nuxt": "^2.0.3"
+    }
+}

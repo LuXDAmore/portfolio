@@ -1,0 +1,66 @@
+# NX
+.nx/cache
+.nx/workspace-data
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+.vercel_build_output
+.build-*
+.netlify
+configurations
+staticwebapp.config.*
+
+# Node dependencies
+node_modules
+vendor
+.npmrc
+
+# Logs
+logs
+*.log
+
+# Misc
+.fleet
+
+# Testing
+reports
+coverage
+*.lcov
+.nyc_output
+
+# Intellij idea
+*.iml
+.idea
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+apps/**/.env
+!apps/**/env
+!apps/**/env/**
+
+# Yarn
+**/.yarn/cache
+**/.yarn/*state*
+
+# Temp directories
+.temp
+.tmp
+.cache

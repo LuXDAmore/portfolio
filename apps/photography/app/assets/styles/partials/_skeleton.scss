@@ -1,0 +1,115 @@
+// Skeleton
+html {
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    color: var( --color-basecolor );
+    text-rendering: optimizeSpeed;
+
+}
+
+html,
+body {
+
+    font-family: var( --font-family-secondary );
+
+}
+
+body {
+
+    padding-top: env( safe-area-inset-top, 0 ) env( safe-area-inset-right, 0 ) env( safe-area-inset-bottom, 0 ) env( safe-area-inset-left, 0 );
+
+}
+
+.main-content {
+
+    min-height: 92vh;
+
+}
+
+a {
+
+    display: inline-flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+a,
+button,
+input,
+textarea,
+select {
+
+    outline: 0;
+    outline-color: var( --color-primary );
+    transition: var( --transition-cubic );
+
+}
+
+a,
+button {
+
+    &:active,
+    &:focus {
+
+        outline: 1px auto var( --color-primary );
+
+        outline-width: 1px;
+        outline-style: auto;
+
+    }
+
+}
+
+fieldset {
+
+    margin: 0;
+    padding: .01em 0 0;
+    border: 0;
+
+}
+
+input,
+textarea,
+select {
+
+    &:active,
+    &:focus {
+
+        border-color: var( --color-primary );
+
+    }
+
+}
+
+small {
+
+    font-size: var( --font-size-xs );
+
+}
+
+p {
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+[rendersubtree] {
+
+    content-visibility: auto;
+
+}
+
+ul,
+ol {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}

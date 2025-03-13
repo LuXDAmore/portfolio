@@ -1,0 +1,14 @@
+// Single Fonts
+$font-system: "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
+$fonts: (
+    "system": (
+        "base": $font-system,
+    ),
+    // Portals
+    "primary": (
+        "base": $font-system,
+    ),
+    "secondary": (
+        "base": $font-system,
+    ),
+) !default;

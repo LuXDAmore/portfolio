@@ -1,0 +1,37 @@
+{
+    "name": "@luxdamore/optimizer",
+    "version": "1.0.0",
+    "description": "The image optimizer",
+    "author": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)",
+    "license": "MIT",
+    "homepage": "https://github.com/LuXDAmore/photography",
+    "keywords": [
+        "design-system",
+        "stylesheet"
+    ],
+    "contributors": [
+        {
+            "name": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LuXDAmore/photography.git"
+    },
+    "bugs": {
+        "url": "https://github.com/LuXDAmore/photography/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "graphql:download-possible-types": "node ./scripts/graphql-download-possible-types.js"
+    },
+    "dependencies": {}
+}

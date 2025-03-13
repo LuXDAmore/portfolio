@@ -1,0 +1,67 @@
+{
+    "name": "@luxdamore/developer",
+    "version": "1.0.0",
+    "description": "The developer portfolio",
+    "author": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)",
+    "license": "MIT",
+    "homepage": "https://developer.lucaiaconelli.it",
+    "keywords": [
+        "design-system",
+        "nuxt",
+        "nuxt-module",
+        "vuejs",
+        "nuxtjs",
+        "modules"
+    ],
+    "contributors": [
+        {
+            "name": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LuXDAmore/portfolio.git"
+    },
+    "bugs": {
+        "url": "https://github.com/LuXDAmore/portfolio/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "nuxt.config.js",
+        ".nuxt",
+        ".output",
+        "dist"
+    ],
+    "type": "module",
+    "main": "nuxt.config.js",
+    "scripts": {
+        "developer:check:nuxt4": "pnpm dlx codemod@latest nuxt/4/migration-recipe",
+        "developer:analyze": "nuxi analyze",
+        "developer:build": "nuxi build",
+        "developer:nuxt:upgrade": "nuxi upgrade --force",
+        "developer:dev": "nuxi dev -o",
+        "developer:serve": "pnpm developer:dev",
+        "developer:generate": "nuxi generate",
+        "developer:preview": "nuxi preview",
+        "developer:clean": "nuxi cleanup",
+        "developer:prepare": "nuxi prepare",
+        "predeveloper:start": "pnpm developer:clean && pnpm developer:build",
+        "developer:start": "nuxi start",
+        "postinstall": "pnpm developer:prepare"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.21",
+        "modern-normalize": "^3.0.1",
+        "nuxi": "^3.22.5",
+        "nuxt": "^3.16.0",
+        "sass": "^1.85.1",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    },
+    "devDependencies": {
+        "@parcel/watcher": "^2.5.1",
+        "@tsconfig/nuxt": "^2.0.3"
+    }
+}

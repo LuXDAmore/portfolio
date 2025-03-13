@@ -1,0 +1,38 @@
+:root {
+
+    // Aspect Ratio - Automation
+    @include print-aspect-ratio-vars;
+
+    // Border Radius - Automation
+    @include print-border-radius-vars;
+
+    // Fonts - Automation
+    @include print-fonts-vars;
+
+    // Font Sizes - Automation
+    @include print-fonts-sizes-vars;
+
+    // Font Weights - Automation
+    @include print-fonts-weights-vars;
+
+    // Line Heights - Automation
+    @include print-line-heights-vars;
+
+    // Breakpoints - Automation
+    @include print-breakpoints-vars;
+
+    // Sizes - Automation
+    @include print-sizes-vars;
+
+    // Spacing - Automation
+    @include print-spacing-vars;
+
+    // Transitions - Automation
+    @include print-transitions-vars;
+
+    // Z-Index - Automation
+    @include print-z-index-vars;
+
+    font-size: 16px;
+
+}

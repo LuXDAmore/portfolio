@@ -1,0 +1,13 @@
+// Cool idea
+:export {
+
+    // Colors - Automation
+    @include print-colors;
+
+    // Fonts - Automation
+    @include print-fonts;
+
+    // Breakpoints - Automation
+    @include print-breakpoints;
+
+}

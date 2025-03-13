@@ -1,0 +1,35 @@
+// Breakpoints
+$breakpoints: (
+    "xxs": (
+        "base": 321px,
+        "down": 320.98px,
+    ),
+    "xs": (
+        "base": 376px,
+        "down": 375.98px,
+    ),
+    "sm": (
+        "base": 600px,
+        "down": 599.98px,
+    ),
+    "md": (
+        "base": 768px,
+        "down": 767.98px,
+    ),
+    "lg": (
+        "base": 1024px,
+        "down": 1023.98px,
+    ),
+    "xl": (
+        "base": 1280px,
+        "down": 1279.98px,
+    ),
+    "xxl": (
+        "base": 1400px,
+        "down": 1399.98px,
+    ),
+    "xxxl": (
+        "base": 1600px,
+        "down": 1599.98px,
+    ),
+) !default;

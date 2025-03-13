@@ -1,0 +1,5 @@
+{
+    "*.{vue,ts,js}": "yarn eslint-fix",
+    "*.css": "yarn stylelint-fix-css",
+    "*.scss": "yarn stylelint-fix-scss"
+}

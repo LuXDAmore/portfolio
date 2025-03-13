@@ -1,0 +1,68 @@
+{
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "useDaemonProcess": false,
+    "targetDefaults": {
+        "base:build": {
+            "dependsOn": ["^base:build"],
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "ai:build": {
+            "dependsOn": ["^ai:build"],
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "fal:build": {
+            "dependsOn": ["^fal:build"],
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "base:generate": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "ai:generate": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "fal:generate": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "test": {
+            "cache": true
+        },
+        "ds:build": {
+            "dependsOn": ["^ds:build"],
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "natf:prepack": {
+            "dependsOn": ["^natf:prepack"],
+            "outputs": ["{projectRoot}/dist"],
+            "cache": true
+        },
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["{projectRoot}/dist"],
+            "cache": true
+        },
+        "ds:generate": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "ds:build-storybook": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "natf:build": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        },
+        "generate": {
+            "outputs": ["{projectRoot}/.output"],
+            "cache": true
+        }
+    },
+    "defaultBase": "main"
+}

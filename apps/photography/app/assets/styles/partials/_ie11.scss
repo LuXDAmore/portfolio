@@ -1,0 +1,6 @@
+// IE 11 CSS
+// stylelint-disable -- Tricks per IE 11
+_:-ms-fullscreen, :root .mds-card--col { display: block !important; }
+_:-ms-fullscreen, :root .mds-switch__checkbox { display: none !important; }
+_:-ms-fullscreen, :root .mds-switch__toggle__message { display: none !important; }
+// stylelint-enable
