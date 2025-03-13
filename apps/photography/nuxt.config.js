@@ -88,8 +88,8 @@ export default defineNuxtConfig(
                         name: 'msapplication-config',
                     },
                 ],
-                title: process.env.NUXT_TITLE || 'Abilio - Nuxt - Base Layer',
-                titleTemplate: `%s - ${ process.env.NUXT_TITLE || 'Abilio - Nuxt - Base Layer' }`,
+                title: process.env.NUXT_TITLE || 'Luca Iaconelli - Nuxt - Base Layer',
+                titleTemplate: `%s - ${ process.env.NUXT_TITLE || 'Luca Iaconelli - Nuxt - Base Layer' }`,
                 viewport: 'width=device-width,initial-scale=1',
             },
             layoutTransition: {
