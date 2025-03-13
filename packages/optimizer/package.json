@@ -4,7 +4,7 @@
     "description": "The image optimizer",
     "author": "Luca Iaconelli <lucabelli@msn.com> (https://lucaiaconelli.it)",
     "license": "MIT",
-    "homepage": "https://github.com/LuXDAmore/photography",
+    "homepage": "https://github.com/LuXDAmore/portfolio",
     "keywords": [
         "design-system",
         "stylesheet"
@@ -16,10 +16,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/LuXDAmore/photography.git"
+        "url": "git+https://github.com/LuXDAmore/portfolio"
     },
     "bugs": {
-        "url": "https://github.com/LuXDAmore/photography/issues"
+        "url": "https://github.com/LuXDAmore/portfolio/issues"
     },
     "publishConfig": {
         "access": "public"
