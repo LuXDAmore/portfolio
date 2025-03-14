@@ -18,6 +18,8 @@ staticwebapp.config.*
 # WP + Nuxt
 schema.graphql
 graphql.config.*
+apps/photography/app/extend
+apps/developer/app/extend
 .queries
 
 # Node dependencies
