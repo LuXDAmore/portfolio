@@ -15,6 +15,9 @@ dist
 configurations
 staticwebapp.config.*
 
+# WP + Nuxt
+schema.graphql
+
 # Node dependencies
 node_modules
 vendor

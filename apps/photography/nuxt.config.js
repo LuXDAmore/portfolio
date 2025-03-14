@@ -154,12 +154,7 @@ export default defineNuxtConfig(
 
         future: { compatibilityVersion: 4 },
 
-        modules: [
-            '@nuxtjs/seo',
-            '@pinia/nuxt',
-            '@wpnuxt/core',
-            '@vite-pwa/nuxt'
-        ],
+        modules: ['@nuxtjs/seo', '@pinia/nuxt', '@wpnuxt/core', '@vite-pwa/nuxt', '@nuxt/image'],
 
         nitro: {
             compressPublicAssets: {
@@ -206,7 +201,9 @@ export default defineNuxtConfig(
         routeRules: {
             // ?: Add cache headers for CSS/JS files
             '/_nuxt/*.css': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
-            '/_nuxt/*.js': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } }
+            '/_nuxt/*.js': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+            // ?: WP Images proxy
+            '/wp-content/**': { proxy: { to: `${ process.env.WORDPRESS_URL }/wp-content/**` } }
         },
 
         router: { options: { scrollBehaviorType: 'smooth', } },
@@ -226,7 +223,13 @@ export default defineNuxtConfig(
             vue: { template: { compilerOptions: { whitespace: 'condense' } } },
         },
 
-        wpNuxt: { wordpressUrl: process.env.WORDPRESS_URL, },
+        wpNuxt: {
+            downloadSchema: true,
+            enableCache: false,
+            faustSecretKey: process.env.WORDPRESS_FAUST_SECRET_KEY,
+            frontendUrl: process.env.FRONTEND_URL,
+            wordpressUrl: process.env.WORDPRESS_URL
+        },
 
     }
 );

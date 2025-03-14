@@ -57,3 +57,7 @@ Projects run localhost over https protocol, the certifications are already provi
     pnpm lint:fix # Lint all the files in every project at once
 
 ```
+
+## WPNuxt
+
+You can find more information [here](https://wpnuxt.com/).
