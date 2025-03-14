@@ -18,7 +18,6 @@ const
 // Nuxt Config
 export default defineNuxtConfig(
     {
-
         alias: {
             '=': fileURLToPath( new URL( 'app/', import.meta.url ) ), // eslint-disable-line compat/compat,
             '==': fileURLToPath( new URL( '.', import.meta.url ) ), // eslint-disable-line compat/compat,
@@ -26,11 +25,11 @@ export default defineNuxtConfig(
 
         // ?: Da attivare per debug, utilissimo
         /*
-            debug: isProduction,
-            devtools: isProduction,
-            sourcemap: true,
-            vite: { build: { minify: false, }, },
-        */
+          debug: isProduction,
+          devtools: isProduction,
+          sourcemap: true,
+          vite: { build: { minify: false, }, },
+      */
 
         app: {
             baseURL: '/',
@@ -117,7 +116,6 @@ export default defineNuxtConfig(
         },
 
         appId: 'photography',
-
         compatibilityDate: '2025-03-12',
 
         css: [
@@ -156,12 +154,12 @@ export default defineNuxtConfig(
 
         future: { compatibilityVersion: 4 },
 
-        // modules: [
-        //     // '@luxdamore/nuxt-prune-html',
-        //     // '@luxdamore/nuxt-apis-to-file',
-        //     // '@pinia/nuxt',
-        //     // '@vite-pwa/nuxt',
-        // ],
+        modules: [
+            '@nuxtjs/seo',
+            '@pinia/nuxt',
+            '@wpnuxt/core',
+            '@vite-pwa/nuxt'
+        ],
 
         nitro: {
             compressPublicAssets: {
@@ -227,6 +225,8 @@ export default defineNuxtConfig(
             },
             vue: { template: { compilerOptions: { whitespace: 'condense' } } },
         },
+
+        wpNuxt: { wordpressUrl: process.env.WORDPRESS_URL, },
 
     }
 );
