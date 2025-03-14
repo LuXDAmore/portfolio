@@ -1,0 +1,26 @@
+query getExhibitions(
+    $size: MediaItemSizeEnum = LARGE
+    $size1: MediaItemSizeEnum = LARGE
+    $size2: MediaItemSizeEnum = LARGE
+) {
+    exhibitions {
+        nodes {
+            content
+            date
+            excerpt(format: RENDERED)
+            featuredImage {
+                node {
+                    id
+                    file
+                    sizes(size: $size)
+                    sourceUrl(size: $size1)
+                    srcSet(size: $size2)
+                    title(format: RAW)
+                }
+            }
+            slug
+            id
+            title(format: RAW)
+        }
+    }
+}

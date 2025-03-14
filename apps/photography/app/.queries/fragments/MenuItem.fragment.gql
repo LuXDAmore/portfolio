@@ -1,4 +1,0 @@
-fragment MenuItem on MenuItem {
-  label
-  uri
-}

@@ -17,6 +17,7 @@ staticwebapp.config.*
 
 # WP + Nuxt
 schema.graphql
+graphql.config.*
 
 # Node dependencies
 node_modules
