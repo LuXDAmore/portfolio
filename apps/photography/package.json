@@ -56,6 +56,7 @@
         "@nuxt/image": "1.9.0",
         "@nuxtjs/seo": "3.0.1",
         "@pinia/nuxt": "0.10.1",
+        "@vite-pwa/nuxt": "^0.10.6",
         "@wpnuxt/core": "1.0.0-edge.27",
         "autoprefixer": "^10.4.21",
         "consola": "^3.4.0",
