@@ -9,23 +9,23 @@
 .nitro
 .cache
 dist
+.dist
+
 .vercel_build_output
 .build-*
+.build
 .netlify
 configurations
 staticwebapp.config.*
 
-# WP + Nuxt
-schema.graphql
-graphql.config.*
-apps/photography/app/extend
-apps/developer/app/extend
-.queries
-
 # Node dependencies
 node_modules
 vendor
-.npmrc
+lib-cov
+lcov.info
+pids
+results
+.node_history
 
 # Logs
 logs
@@ -36,6 +36,7 @@ logs
 
 # Testing
 reports
+!app/**/reports
 coverage
 *.lcov
 .nyc_output
@@ -45,29 +46,68 @@ coverage
 .idea
 
 # OSX
+# Misc
 .DS_Store
 .AppleDouble
 .LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
 
+*~
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
 # Local env files
 .env
 .env.*
 !.env.example
 
-apps/**/.env
-!apps/**/env
-!apps/**/env/**
+!env/*
 
 # Yarn
-**/.yarn/cache
-**/.yarn/*state*
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
 
 # Temp directories
 .temp
 .tmp
+*.sql
+*.sqlite
+*.sqlite3
 .cache
+
+# Various
+ssl
+.idea
+nbproject
+public/uploads/*
+!public/uploads/.gitkeep
+.tsbuildinfo
+.eslintcache
+tsconfig.tsbuildinfo
+
+# MCP
+.cursor/mcp.json
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md

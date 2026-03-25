@@ -12,36 +12,41 @@
         },
         {
             "type": "chore",
-            "hidden": true,
+            "hidden": false,
             "section": "🏡 Chores"
         },
         {
             "type": "docs",
-            "hidden": true,
+            "hidden": false,
             "section": "📖 Documentation"
         },
         {
             "type": "style",
-            "hidden": true,
+            "hidden": false,
             "section": "🎨 Styling"
         },
         {
             "type": "refactor",
-            "hidden": true,
+            "hidden": false,
             "section": "♻️ Code Refactoring"
         },
         {
+            "type": "revert",
+            "hidden": false,
+            "section": "↩️ Reverts"
+        },
+        {
             "type": "perf",
-            "hidden": true,
+            "hidden": false,
             "section": "🔥 Performance Improvements"
         },
         {
             "type": "test",
-            "hidden": true,
+            "hidden": false,
             "section": "✅ Testing"
         }
     ],
-    "commitUrlFormat": "https://dev.azure.com/illimitybank/abilio/_git/frontend-backoffice-abilio/commit/{{hash}}",
-    "compareUrlFormat": "https://dev.azure.com/illimitybank/abilio/_git/frontend-backoffice-abilio?_a=compare&oversion={{previousTag}}&mversion={{currentTag}}",
-    "issueUrlFormat": "https://illimity.atlassian.net/browse/{{id}}"
+    "commitUrlFormat": "https://github.com/TwoTeamIT/GTL-FronEnd/commit/{{hash}}",
+    "compareUrlFormat": "https://github.com/TwoTeamIT/GTL-FronEnd?_a=compare&oversion={{previousTag}}&mversion={{currentTag}}",
+    "issueUrlFormat": "https://twoteamsrl.atlassian.net/jira/core/projects/UNIBO/list?selectedIssue={{id}}"
 }

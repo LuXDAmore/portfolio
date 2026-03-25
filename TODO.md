@@ -1,3 +1,3 @@
 # TODO
 
-- Fare il progetto;
+-Everyone has the right to freedom of thought, conscience and religion.

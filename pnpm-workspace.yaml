@@ -1,3 +1,9 @@
-packages:
-  - "apps/**"
-  - "packages/**"
+onlyBuiltDependencies:
+  - '@morev/vue-transitions'
+  - '@parcel/watcher'
+  - esbuild
+  - maplibre-gl
+  - rollup
+  - sharp
+  - unrs-resolver
+  - vue-demi

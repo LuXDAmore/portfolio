@@ -1,18 +1,19 @@
+next/
+
 public/
 docs/
 
 dist/
+.dist/
 build/
-docs/
-ssr/
+.next/
 
 vendor/
 bower_components/
 node_modules/
 .vscode/
 .nuxt/
-.nuxt-*/
-.nuxt.*/
+.output/
 
 *.md
 *.json

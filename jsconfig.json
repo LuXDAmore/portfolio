@@ -3,9 +3,10 @@
         "node_modules",
         "backup",
         "vendor",
-        "docs",
         ".nuxt",
         "dist",
+        ".dist",
+        ".next",
         ".output"
     ]
 }

@@ -52,7 +52,7 @@ module.exports = {
                         ignore: [ 'after-comment', 'inside-single-line-block' ],
                     },
                 ],
-                'scss/double-slash-comment-empty-line-before': [ 'always', { ignore: [ 'between-comments' ], },],
+                'scss/double-slash-comment-empty-line-before': [ 'always', { ignore: [ 'between-comments' ] }],
             },
         },
     ],
@@ -70,7 +70,7 @@ module.exports = {
         '@stylistic/indentation': 4,
         '@stylistic/number-leading-zero': 'never',
         '@stylistic/string-quotes': 'double',
-        'alpha-value-notation': [ 'percentage', { exceptProperties: [ 'opacity' ], },],
+        'alpha-value-notation': [ 'percentage', { exceptProperties: [ 'opacity' ] }],
         'at-rule-empty-line-before': [
             'always',
             {
@@ -85,8 +85,9 @@ module.exports = {
         ],
         'at-rule-no-unknown': null,
         'block-no-empty': null,
+        'color-function-alias-notation': 'with-alpha',
         'color-function-notation': 'modern',
-        'comment-empty-line-before': [ 'always', { ignore: [ 'after-comment', 'stylelint-commands' ], },],
+        'comment-empty-line-before': [ 'always', { ignore: [ 'after-comment', 'stylelint-commands' ] }],
         'custom-property-empty-line-before': [
             'always',
             {
@@ -105,7 +106,7 @@ module.exports = {
         'max-nesting-depth': 9,
         'media-query-no-invalid': true,
         'no-descending-specificity': null,
-        'no-invalid-position-at-import-rule': [ true, { ignoreAtRules: [ '/^tailwind/', 'tailwind' ], },],
+        'no-invalid-position-at-import-rule': [ true, { ignoreAtRules: [ '/^tailwind/', 'tailwind' ] }],
         'order/order': [
             [
                 'dollar-variables',
@@ -128,7 +129,7 @@ module.exports = {
                 },
                 'declarations',
                 'rules',
-                { type: 'at-rule', },
+                { type: 'at-rule' },
                 {
                     hasBlock: true,
                     type: 'at-rule',
@@ -208,7 +209,7 @@ module.exports = {
                 severity: 'warning',
             },
         ],
-        'plugin/rational-order': [ true, { severity: 'warning', },],
+        'plugin/rational-order': [ true, { severity: 'warning' }],
         'property-no-unknown': [
             true,
             {
@@ -230,11 +231,11 @@ module.exports = {
                 ignore: [ 'after-comment', 'inside-block' ],
             },
         ],
-        'selector-class-pattern': [ '^([a-z][a-z0-9]*)((--?|(__)?)[a-z0-9]+)*$', { resolveNestedSelectors: true, },],
+        'selector-class-pattern': [ '^([a-z][a-z0-9]*)((--?|(__)?)[a-z0-9]+)*$', { resolveNestedSelectors: true }],
         'selector-id-pattern': null,
         'selector-max-compound-selectors': 9,
         'selector-max-id': 2,
-        'selector-no-qualifying-type': [ true, { ignore: [ 'class', 'attribute' ], },],
+        'selector-no-qualifying-type': [ true, { ignore: [ 'class', 'attribute' ] }],
         'selector-pseudo-class-no-unknown': [
             true,
             {

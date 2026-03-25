@@ -1,6 +1,23 @@
 // Typescript and Shared rules
 export const sharedRules = {
-    'accessor-pairs': [ 'warn', { enforceForClassMembers: true, },],
+    '@stylistic/comma-dangle': [
+        'warn',
+        {
+            arrays: 'always-multiline',
+            enums: 'only-multiline',
+            exports: 'always-multiline',
+            functions: 'only-multiline',
+            generics: 'only-multiline',
+            imports: 'always-multiline',
+            objects: 'always-multiline',
+            tuples: 'only-multiline',
+        },
+    ],
+    '@stylistic/function-call-spacing': [ 'warn', 'never' ],
+    '@stylistic/function-paren-newline': [ 'warn', 'multiline-arguments' ],
+    '@stylistic/no-extra-semi': 'warn',
+    '@stylistic/semi': [ 'warn', 'always' ],
+    'accessor-pairs': [ 'warn', { enforceForClassMembers: true }],
     'array-bracket-newline': [
         'warn',
         {
@@ -17,7 +34,7 @@ export const sharedRules = {
             singleValue: true,
         },
     ],
-    'array-callback-return': [ 'warn', { allowImplicit: true, },],
+    'array-callback-return': [ 'warn', { allowImplicit: true }],
     'array-element-newline': [
         'warn',
         {
@@ -38,9 +55,9 @@ export const sharedRules = {
     'brace-style': [
         'warn',
         '1tbs',
-        { allowSingleLine: true, },
+        { allowSingleLine: true },
     ],
-    camelcase: [ 'off', { ignoreDestructuring: true, },],
+    camelcase: [ 'off', { ignoreDestructuring: true }],
     'capitalized-comments': [
         'off',
         'always',
@@ -80,21 +97,19 @@ export const sharedRules = {
     'dot-notation': 'warn',
     'eol-last': 'warn',
     eqeqeq: [ 'warn', 'always' ],
-    'eslint-comments/disable-enable-pair': [ 'warn', { allowWholeFile: true, },],
+    'eslint-comments/disable-enable-pair': [ 'warn', { allowWholeFile: true }],
     'eslint-comments/no-aggregating-enable': 'warn',
     'eslint-comments/no-duplicate-disable': 'warn',
     'eslint-comments/no-unused-disable': 'warn',
     'for-direction': 'warn',
-    'func-call-spacing': [ 'warn', 'never' ],
-    'func-name-matching': [ 'warn', { considerPropertyDescriptor: true, },],
+    'func-name-matching': [ 'warn', { considerPropertyDescriptor: true }],
     'func-names': [ 'warn', 'never' ],
     'function-call-argument-newline': [ 'warn', 'consistent' ],
-    'function-paren-newline': [ 'warn', 'multiline-arguments' ],
     'generator-star-spacing': [ 'warn', 'both' ],
     'getter-return': 'warn',
     'grouped-accessor-pairs': [ 'warn', 'getBeforeSet' ],
     'guard-for-in': 'warn',
-    'import-newlines/enforce': [ 'warn', { forceSingleLine: false, }],
+    'import-newlines/enforce': [ 'warn', { forceSingleLine: false }],
     'import-x/default': 'warn',
     'import-x/export': 'warn',
     'import-x/extensions': [
@@ -111,13 +126,13 @@ export const sharedRules = {
                 mjs: 'always',
                 module: 'always',
                 svg: 'always',
-                ts: 'always',
+                ts: 'never',
                 vue: 'always',
             },
         },
     ],
     'import-x/first': 'warn',
-    'import-x/namespace': [ 'warn', { allowComputed: true, },],
+    'import-x/namespace': [ 'warn', { allowComputed: true }],
     'import-x/no-absolute-path': 'warn',
     'import-x/no-anonymous-default-export': 'off',
     'import-x/no-duplicates': 'warn',
@@ -147,42 +162,42 @@ export const sharedRules = {
             ],
         },
     ],
-    'import-x/no-useless-path-segments': [ 'warn', { noUselessIndex: true, },],
+    'import-x/no-useless-path-segments': [ 'warn', { noUselessIndex: true }],
     'import-x/no-webpack-loader-syntax': 'warn',
     indent: [
         'warn',
         4,
-        { SwitchCase: 1, },
+        { SwitchCase: 1 },
     ],
     'jsdoc/check-access': 'warn',
     'jsdoc/check-alignment': 'warn',
     'jsx-quotes': 'warn',
-    'key-spacing': [ 'warn', { beforeColon: false, },],
+    'key-spacing': [ 'warn', { beforeColon: false }],
     'keyword-spacing': [
         'warn',
         {
             after: false,
             overrides: {
-                case: { after: true, },
+                case: { after: true },
                 catch: {
                     after: false,
                     before: true,
                 },
-                const: { after: true, },
-                default: { after: true, },
+                const: { after: true },
+                default: { after: true },
                 else: {
                     after: true,
                     before: true,
                 },
-                export: { after: true, },
-                finally: { after: true, },
+                export: { after: true },
+                finally: { after: true },
                 from: {
                     after: true,
                     before: true,
                 },
-                import: { after: true, },
-                return: { after: true, },
-                try: { after: true, },
+                import: { after: true },
+                return: { after: true },
+                try: { after: true },
             },
         },
     ],
@@ -204,9 +219,9 @@ export const sharedRules = {
     'lines-between-class-members': [
         'warn',
         'always',
-        { exceptAfterSingleLine: true, },
+        { exceptAfterSingleLine: true },
     ],
-    'max-depth': [ 'warn', { max: 7, },],
+    'max-depth': [ 'warn', { max: 7 }],
     'max-len': [
         'off',
         1200,
@@ -218,14 +233,20 @@ export const sharedRules = {
         },
     ],
     'max-nested-callbacks': [ 'warn', 7 ],
-    'max-params': [ 'warn', { max: 7, },],
+    'max-params': [ 'warn', { max: 7 }],
     'max-statements': [
         'warn',
         127,
-        { ignoreTopLevelFunctions: true, },
+        { ignoreTopLevelFunctions: true },
     ],
     'max-statements-per-line': 'warn',
-    'new-cap': [ 'warn', { newIsCap: true, },],
+    'new-cap': [
+        'warn',
+        {
+            capIsNewExceptionPattern: 'openapi.',
+            newIsCap: true,
+        },
+    ],
     'new-parens': 'warn',
     'no-alert': 'warn',
     'no-array-constructor': 'warn',
@@ -259,8 +280,8 @@ export const sharedRules = {
     'no-dupe-else-if': 'warn',
     'no-dupe-keys': 'warn',
     'no-duplicate-case': 'warn',
-    'no-duplicate-imports': [ 'warn', { includeExports: true, },],
-    'no-else-return': [ 'warn', { allowElseIf: false, },],
+    'no-duplicate-imports': [ 'warn', { includeExports: true }],
+    'no-else-return': [ 'warn', { allowElseIf: false }],
     'no-empty': 'warn',
     'no-empty-character-class': 'warn',
     'no-empty-pattern': 'warn',
@@ -277,7 +298,7 @@ export const sharedRules = {
     'no-floating-decimal': 'warn',
     'no-func-assign': 'warn',
     'no-global-assign': 'warn',
-    'no-implicit-coercion': [ 'warn', { allow: [ '!!', '~' ], },],
+    'no-implicit-coercion': [ 'warn', { allow: [ '!!', '~' ] }],
     'no-implicit-globals': 'warn',
     'no-implied-eval': 'warn',
     'no-import-assign': 'warn',
@@ -331,7 +352,7 @@ export const sharedRules = {
     'no-return-assign': [ 'warn', 'except-parens' ],
     'no-return-await': 'warn',
     'no-script-url': 'warn',
-    'no-self-assign': [ 'warn', { props: true, },],
+    'no-self-assign': [ 'warn', { props: true }],
     'no-self-compare': 'warn',
     'no-sequences': 'warn',
     'no-setter-return': 'warn',
@@ -372,11 +393,11 @@ export const sharedRules = {
         },
     ],
     'no-useless-call': 'warn',
-    'no-useless-computed-key': [ 'warn', { enforceForClassMembers: true, },],
+    'no-useless-computed-key': [ 'warn', { enforceForClassMembers: true }],
     'no-useless-concat': 'warn',
     'no-useless-constructor': 'warn',
     'no-useless-escape': 'warn',
-    'no-useless-rename': [ 'warn', { ignoreExport: true, },],
+    'no-useless-rename': [ 'warn', { ignoreExport: true }],
     'no-useless-return': 'warn',
     'no-void': 'warn',
     'no-whitespace-before-property': 'warn',
@@ -405,7 +426,7 @@ export const sharedRules = {
         },
     ],
     'object-curly-spacing': [ 'warn', 'always' ],
-    'object-property-newline': [ 'warn', { allowAllPropertiesOnSameLine: false, },],
+    'object-property-newline': [ 'warn', { allowAllPropertiesOnSameLine: false }],
     'object-shorthand': [ 'warn', 'always' ],
     'one-var': [
         'warn',
@@ -453,12 +474,12 @@ export const sharedRules = {
     ],
     'prefer-const': 'warn',
     'prefer-exponentiation-operator': 'warn',
-    'prefer-promise-reject-errors': [ 'warn', { allowEmptyReject: true, },],
+    'prefer-promise-reject-errors': [ 'warn', { allowEmptyReject: true }],
     'prefer-regex-literals': 'warn',
     // 'prettier/prettier': 'off',
     'promise/no-new-statics': 'warn',
     'promise/no-return-in-finally': 'warn',
-    'promise/no-return-wrap': [ 'warn', { allowReject: true, },],
+    'promise/no-return-wrap': [ 'warn', { allowReject: true }],
     'promise/param-names': 'warn',
     'promise/prefer-await-to-then': 'warn',
     'promise/valid-params': 'warn',
@@ -484,12 +505,12 @@ export const sharedRules = {
             before: false,
         },
     ],
-    'sort-imports': [ 'warn', { ignoreDeclarationSort: true, }], // ?: Disabilitata perché in conflitto con Perfectioninst
-    'sort-keys': 'off', // ?: Disabilitata perché in conflitto con Perfectioninst
+    'sort-imports': [ 'warn', { ignoreDeclarationSort: true }], // ?: Disabilitata perché in conflitto con Perfectioninst
+    'sort-keys': 'warn', // ?: Disabilitata perché in conflitto con Perfectioninst
     'sort-keys-fix/sort-keys-fix': [
         'warn',
         'asc',
-        { natural: true, }
+        { natural: true },
     ], // ?: Disabilitata perché in conflitto con Perfectioninst
     'space-before-blocks': [ 'warn', 'always' ],
     'space-before-function-paren': [
@@ -506,7 +527,7 @@ export const sharedRules = {
         'warn',
         {
             nonwords: true,
-            words: true
+            words: true,
         },
     ],
     'spaced-comment': [
@@ -523,7 +544,7 @@ export const sharedRules = {
                 markers: [
                     '!',
                     '*',
-                    '?'
+                    '?',
                 ],
             },
             line: {
@@ -555,8 +576,8 @@ export const sharedRules = {
     'template-tag-spacing': [ 'warn', 'never' ],
     'unicode-bom': [ 'warn', 'never' ],
     // FIXME: Da riattivare quando aggiornano i vari plugins
-    'unicorn/better-regex': [ 'warn', { sortCharacterClasses: false, },],
-    'unicorn/catch-error-name': [ 'warn', { name: 'exception', },],
+    'unicorn/better-regex': [ 'warn', { sortCharacterClasses: false }],
+    'unicorn/catch-error-name': [ 'warn', { name: 'exception' }],
     'unicorn/consistent-destructuring': 'warn',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/error-message': 'off',
@@ -625,16 +646,16 @@ export const sharedRules = {
                 obj: true,
                 props: true,
             },
-            ignore: [ String.raw`\.e2e`, /^ignore/i ]
+            ignore: [ String.raw`\.e2e`, /^ignore/i ],
         },
     ],
     'unicorn/text-encoding-identifier-case': 'off',
     'use-isnan': 'warn',
-    'valid-typeof': [ 'warn', { requireStringLiterals: false, },],
+    'valid-typeof': [ 'warn', { requireStringLiterals: false }],
     'wrap-iife': [
         'warn',
         'inside',
-        { functionPrototypeMethods: true, },
+        { functionPrototypeMethods: true },
     ],
     'yield-star-spacing': [ 'warn', 'both' ],
     yoda: 'warn',
@@ -642,22 +663,6 @@ export const sharedRules = {
 
 // Typescript
 export const typescriptRules = {
-    // Stylistic
-    '@stylistic/ts/comma-dangle': [
-        'warn',
-        {
-            arrays: 'always-multiline',
-            enums: 'only-multiline',
-            exports: 'always-multiline',
-            functions: 'only-multiline',
-            generics: 'only-multiline',
-            imports: 'always-multiline',
-            objects: 'always-multiline',
-            tuples: 'only-multiline',
-        },
-    ],
-    '@stylistic/ts/no-extra-semi': 'warn',
-    '@stylistic/ts/semi': [ 'warn', 'always' ],
     '@typescript-eslint/adjacent-overload-signatures': 'warn',
     '@typescript-eslint/ban-ts-comment': [
         'warn',
@@ -669,15 +674,10 @@ export const typescriptRules = {
             'ts-nocheck': 'allow-with-description',
         },
     ],
-
     // ?: Disabilitata perché in conflitto con Perfectioninst
     // ?: https://typescript-eslint.io/blog/announcing-typescript-eslint-v8-beta#replacement-of-ban-types
-
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-empty-function': 'off', // FIXME: Da riattivare quando aggiornano i vari plugins
-
+    '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-empty-object-type': 'warn',
-
     '@typescript-eslint/no-explicit-any': [
         'warn',
         {
@@ -709,12 +709,14 @@ export const typescriptRules = {
 
     '@typescript-eslint/sort-type-constituents': 'warn',
     // '@typescript-eslint/no-floating-promises': 'warn', // ?: Questa può essere abilitata solo con il Typecheck
+    '@typescript-eslint/unified-signatures': 'off',
+
     'import-x/named': 'warn',
     'import-x/no-unresolved': [ 'off', { ignore: [ '#imports' ] }],
     'import-x/order': [
         'warn',
         {
-            alphabetize: { order: 'asc', },
+            alphabetize: { order: 'asc' },
             groups: [
                 'builtin', // Built-in types are first
                 'external',
@@ -758,12 +760,12 @@ export const typescriptRules = {
                 {
                     group: 'internal',
                     pattern: '#**',
-                    position: 'before'
+                    position: 'before',
                 },
                 {
                     group: 'internal',
                     pattern: 'pinia',
-                    position: 'before'
+                    position: 'before',
                 },
                 {
                     group: 'internal',
@@ -772,23 +774,23 @@ export const typescriptRules = {
                 {
                     group: 'internal',
                     pattern: '~/**',
-                    position: 'after'
+                    position: 'after',
                 },
                 {
                     group: 'object',
                     pattern: '~/costants**',
-                    position: 'after'
+                    position: 'after',
                 },
             ],
             pathGroupsExcludedImportTypes: [
                 'ant-design-vue',
                 '@ant-design',
-                'pinia'
+                'pinia',
             ],
             warnOnUnassignedImports: true,
         },
     ],
-    'no-duplicate-imports': 'off',
+    'no-duplicate-imports': 'warn',
     'no-extra-semi': 'off',
     'no-unused-vars': 'off',
     semi: 'off',
@@ -821,13 +823,32 @@ export const vueAndNuxtRules = {
     'vue/component-name-in-template-casing': [
         'warn',
         'kebab-case',
-        { registeredComponentsOnly: false },
+        {
+            globals: [
+                'NuxtChild',
+                'NuxtPage',
+                'NuxtLayout',
+                'NuxtLink',
+                'NuxtImg',
+                'NuxtPicture',
+                'RouterView',
+                'RouterLink',
+                '/^u-/',
+            ],
+            ignores: [
+                'Head',
+                'Title',
+                'Meta',
+                'Link',
+            ],
+            registeredComponentsOnly: false,
+        },
     ],
     'vue/component-options-name-casing': [ 'warn', 'kebab-case' ],
     'vue/custom-event-name-casing': [
         'warn',
         'kebab-case',
-        { ignores: [ '/^[a-z]+(?:-[a-z]+)*:[a-z]+(?:-[a-z]+)*$/u' ] }
+        { ignores: [ '/^[a-z]+(?:-[a-z]+)*:[a-z]+(?:-[a-z]+)*$/u' ] },
     ],
     'vue/html-closing-bracket-newline': [
         'warn',
@@ -864,10 +885,11 @@ export const vueAndNuxtRules = {
         },
     ],
     'vue/no-dupe-keys': 'warn',
+    'vue/no-duplicate-attr-inheritance': [ 'warn', { checkMultiRootNodes: true }],
     'vue/no-multiple-template-root': 'off',
     'vue/no-unused-components': 'warn',
     'vue/no-unused-vars': 'warn',
-    'vue/no-use-v-if-with-v-for': [ 'warn', { allowUsingIterationVar: true, },],
+    'vue/no-use-v-if-with-v-for': [ 'warn', { allowUsingIterationVar: true }],
     'vue/no-v-for-template-key': 'off',
     'vue/no-v-for-template-key-on-child': 'warn',
     'vue/no-v-html': 'off',
@@ -897,12 +919,12 @@ export const vueAndNuxtRules = {
         'warn',
         {
             nonwords: true,
-            words: true
+            words: true,
         },
     ],
     'vue/static-class-names-order': 'warn',
     'vue/valid-next-tick': 'warn',
-    'vue/valid-v-slot': [ 'warn', { allowModifiers: true, },],
+    'vue/valid-v-slot': [ 'warn', { allowModifiers: true }],
 };
 
 export const vueAndNuxtGlobals = {
@@ -910,6 +932,7 @@ export const vueAndNuxtGlobals = {
     Component: 'readonly',
     Ref: 'readonly',
     abortNavigation: 'readonly',
+    acceptHMRUpdate: 'readonly',
     addRouteMiddleware: 'readonly',
     callOnce: 'readonly',
     clearError: 'readonly',
@@ -921,13 +944,18 @@ export const vueAndNuxtGlobals = {
     defineAsyncComponent: 'readonly',
     defineComponent: 'readonly',
     defineEventHandler: 'readonly',
+    defineI18nConfig: 'readonly',
     defineNuxtComponent: 'readonly',
     defineNuxtLink: 'readonly',
     defineNuxtPlugin: 'readonly',
     defineNuxtRouteMiddleware: 'readonly',
     definePageMeta: 'readonly',
+    defineRouteRules: 'readonly',
+    defineStore: 'readonly',
     effect: 'readonly',
     effectScope: 'readonly',
+    encryptDataWithJwt: 'readonly',
+    encryptDataWithPublicRsaKey: 'readonly',
     getCurrentInstance: 'readonly',
     getCurrentScope: 'readonly',
     h: 'readonly',
@@ -983,6 +1011,8 @@ export const vueAndNuxtGlobals = {
     shallowReadonly: 'readonly',
     shallowRef: 'readonly',
     showError: 'readonly',
+    sleep: 'readonly',
+    storeToRefs: 'readonly',
     toRaw: 'readonly',
     toRef: 'readonly',
     toRefs: 'readonly',
@@ -993,9 +1023,11 @@ export const vueAndNuxtGlobals = {
     useAppConfig: 'readonly',
     useAsyncData: 'readonly',
     useAttrs: 'readonly',
+    useClipboard: 'readonly',
     useCookie: 'readonly',
     useCssModule: 'readonly',
     useCssVars: 'readonly',
+    useDebounceFn: 'readonly',
     useDevice: 'readonly',
     useError: 'readonly',
     useFetch: 'readonly',
@@ -1012,12 +1044,15 @@ export const vueAndNuxtGlobals = {
     useRoute: 'readonly',
     useRouter: 'readonly',
     useRuntimeConfig: 'readonly',
+    useSchemaOrg: 'readonly',
     useSeoMeta: 'readonly',
     useServerHead: 'readonly',
     useServerHeadSafe: 'readonly',
     useServerSeoMeta: 'readonly',
     useSlots: 'readonly',
     useState: 'readonly',
+    useTemplateRef: 'readonly',
+    useToast: 'readonly',
     useTransitionState: 'readonly',
     watch: 'readonly',
     watchEffect: 'readonly',
@@ -1026,5 +1061,5 @@ export const vueAndNuxtGlobals = {
     withKeys: 'readonly',
     withMemo: 'readonly',
     withModifiers: 'readonly',
-    withScopeId: 'readonly'
+    withScopeId: 'readonly',
 };

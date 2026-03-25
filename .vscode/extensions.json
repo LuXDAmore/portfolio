@@ -28,13 +28,11 @@
         "usernamehw.errorlens",
         "christian-kohler.path-intellisense",
         "naumovs.color-highlight",
-        "xabikos.javascriptsnippets",
         "esbenp.prettier-vscode",
         "dotjoshjohnson.xml",
         "box-of-hats.bemhelper",
         "syler.sass-indented",
         "mubaidr.vuejs-extension-pack",
-        "dariofuzinato.vue-peek",
         "sdras.vue-vscode-snippets",
         "mikestead.dotenv",
         "pkief.material-icon-theme",
@@ -45,10 +43,12 @@
         "antfu.goto-alias",
         "nuxtr.nuxt-vscode-extentions",
         "vitest.explorer",
+        "vue.volar",
+        "alimozdemir.vscode-nuxt-dx-tools",
         "mylesmurphy.prettify-ts",
         "yoavbls.pretty-ts-errors",
-        "graphql.vscode-graphql",
-        "graphql.vscode-graphql-syntax"
+        "bradlc.vscode-tailwindcss",
+        "antfu.iconify"
     ],
     // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
     "unwantedRecommendations": []

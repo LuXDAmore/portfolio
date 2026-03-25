@@ -1,9 +1,12 @@
+next/
+
 public/
 docs/
 
 dist/
-docs/
-ssr/
+.dist/
+.output/
+.next/
 
 vendor/
 bower_components/

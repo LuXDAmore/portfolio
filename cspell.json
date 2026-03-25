@@ -17,6 +17,7 @@
         "Axerve",
         "changelogen",
         "Chatta",
+        "choco",
         "dxlbvfagvfz",
         "hgpjcytdfhapy",
         "inmemory",
@@ -28,9 +29,20 @@
         "nuxi",
         "ofetch",
         "quimmo",
+        "unwatch",
         "vueuse",
         "zxjya"
     ],
-    "ignoreWords": [],
+    "ignoreWords": [
+        "attiv",
+        "disponibil",
+        "morev",
+        "msdc",
+        "msdo",
+        "notizi",
+        "nuov",
+        "richiest",
+        "transli"
+    ],
     "import": []
 }
